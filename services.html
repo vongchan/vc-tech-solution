@@ -15,33 +15,48 @@
     }
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      padding: 60px 40px;
     }
     .service-box {
       position: relative;
-      background-size: cover;
-      background-position: center;
-      border-radius: 10px;
+      border-radius: 8px;
       overflow: hidden;
-      height: 240px;
-      color: white;
-      display: flex;
-      align-items: flex-end;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      height: 320px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .service-content {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px;
+    .service-box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    .service-box img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
     }
-    .service-box h3 {
-      margin: 0;
+    .service-box:hover img {
+      transform: scale(1.05);
+    }
+    .service-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .service-text h3 {
+      margin: 0 0 10px;
       font-size: 1.2rem;
     }
-    .service-box p {
-      margin-top: 8px;
+    .service-text p {
+      margin: 0;
       font-size: 0.95rem;
     }
   </style>
@@ -62,28 +77,32 @@
 
   <main class="container">
     <div class="services-grid">
-      <div class="service-box" style="background-image: url('images/managed.jpg');">
-        <div class="service-content">
+      <div class="service-box">
+        <img src="images/managed.jpg" alt="Managed IT Services">
+        <div class="service-text">
           <h3>Managed IT Services</h3>
-          <p>End-to-end IT support, systems monitoring, and proactive solutions tailored to your business.</p>
+          <p>Ongoing IT support, helpdesk, patching, and proactive maintenance to keep your business systems running smoothly without interruption.</p>
         </div>
       </div>
-      <div class="service-box" style="background-image: url('images/security.jpg');">
-        <div class="service-content">
+      <div class="service-box">
+        <img src="images/security.jpg" alt="IT Security">
+        <div class="service-text">
           <h3>IT Security</h3>
-          <p>Comprehensive cybersecurity strategies including firewall, endpoint protection, and vulnerability management.</p>
+          <p>Protect your business with robust security solutions including firewalls, antivirus, endpoint protection, and cybersecurity consulting.</p>
         </div>
       </div>
-      <div class="service-box" style="background-image: url('images/consulting.jpg');">
-        <div class="service-content">
+      <div class="service-box">
+        <img src="images/consulting.jpg" alt="IT Consulting">
+        <div class="service-text">
           <h3>IT Consulting</h3>
-          <p>Strategic IT guidance and technology planning to align your infrastructure with growth goals.</p>
+          <p>Get expert advice and project-based support to help you plan and implement technology that drives growth and efficiency.</p>
         </div>
       </div>
-      <div class="service-box" style="background-image: url('images/infrastructure.jpg');">
-        <div class="service-content">
+      <div class="service-box">
+        <img src="images/infrastructure.jpg" alt="IT Infrastructure Services">
+        <div class="service-text">
           <h3>IT Infrastructure Services</h3>
-          <p>Deployment and management of reliable, scalable server, network, and cloud-based infrastructures.</p>
+          <p>Deploy reliable infrastructure including servers, network switches, cloud solutions, and backup systems to power your business.</p>
         </div>
       </div>
     </div>
