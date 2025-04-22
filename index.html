@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional IT Services</title>
+    <title>VC Tech Solution - Professional IT Services</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,11 +17,37 @@
             padding: 20px 0;
             text-align: center;
         }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
+        nav a, .dropdown-btn {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {display: block;}
         .container {
             padding: 20px;
             max-width: 1200px;
@@ -43,8 +69,12 @@
             margin-right: 20px;
             border-radius: 8px;
         }
-        .service h2 {
-            margin-top: 0;
+        .contact {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #e2e2e2;
+            border-radius: 8px;
         }
         footer {
             background-color: #333;
@@ -55,17 +85,31 @@
             width: 100%;
             bottom: 0;
         }
+        .social-links a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Professional IT Services</h1>
+    <h1>VC Tech Solution</h1>
     <nav>
         <a href="#managed">Managed Services</a>
         <a href="#security">Cybersecurity</a>
         <a href="#consulting">IT Consulting</a>
         <a href="#infrastructure">Infrastructure</a>
+        <div class="dropdown">
+            <span class="dropdown-btn">More Services ▼</span>
+            <div class="dropdown-content">
+                <a href="#cloud">Cloud Services</a>
+                <a href="#backup">Backup & Recovery</a>
+                <a href="#support">Helpdesk & Support</a>
+                <a href="#network">Network Management</a>
+            </div>
+        </div>
     </nav>
 </header>
 
@@ -103,10 +147,20 @@
         </div>
     </section>
 
+    <div class="contact">
+        <h3>Contact VC Tech Solution</h3>
+        <p>Email: info@vctechsolution.com | Phone: (123) 456-7890</p>
+    </div>
+
 </div>
 
 <footer>
-    © 2025 Professional IT Services | All rights reserved.
+    © 2025 VC Tech Solution | All rights reserved.
+    <div class="social-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">Facebook</a>
+    </div>
 </footer>
 
 </body>
