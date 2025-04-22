@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VC Tech Solution - Professional IT Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
         body {
-            <div style="background-color: rgba(0, 0, 0, 0.6); min-height: 100vh;"> 
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background: url('images/networking.jpg') no-repeat center center fixed;
-                background-size: cover;
-                color: #fff;
-            </div>
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/networking.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
         }
         header {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.85);
             color: #fff;
             padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         .header-container {
             max-width: 1200px;
@@ -62,10 +65,23 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        .cta-banner {
+            background: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .cta-banner a {
+            color: #fff;
+            text-decoration: underline;
+        }
         .container {
             max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #000;
+            border-radius: 10px;
         }
         .services-grid {
             display: grid;
@@ -78,6 +94,11 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             padding: 20px;
             text-align: center;
+            transition: all 0.3s ease;
+        }
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
         .service img {
             width: 100%;
@@ -108,9 +129,13 @@
 </head>
 <body>
 
+<div class="cta-banner">
+    <strong>Need IT help? <a href="#contact">Contact us today!</a></strong>
+</div>
+
 <header>
     <div class="header-container">
-        <h1>VC Tech Solution</h1>
+        <img src="images/logo.png" alt="VC Tech Solution Logo" style="height: 50px;">
         <nav>
             <a href="#managed">Managed Services</a>
             <a href="#security">Cybersecurity</a>
