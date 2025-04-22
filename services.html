@@ -7,57 +7,29 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    .banner-section {
-      position: relative;
+    .banner {
       width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .banner-section img.banner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      height: 420px;
       object-fit: cover;
-      z-index: -1;
+      margin: 0 auto;
+      display: block;
+      border-radius: 0;
       animation: fadeInFlash 1.5s ease-in forwards;
       opacity: 0;
     }
-    .services-over-banner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 20px;
-      padding: 60px 40px;
-      box-sizing: border-box;
+    .page-title {
+      text-align: center;
+      margin-top: 60px;
     }
-    .services-over-banner .service-box {
-      min-width: 300px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      flex-shrink: 0;
+    .page-title h2 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
     }
-    .services-over-banner .service-box h3 {
-      margin-top: 0;
-    }
-    @keyframes fadeInFlash {
-      0% {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      50% {
-        opacity: 0.7;
-        transform: scale(1.02);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
+    .page-title p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -73,9 +45,15 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section class="banner-section">
-    <img src="images/datacenter.jpg" alt="Data center infrastructure" class="banner">
-    <div class="services-over-banner">
+  <img src="images/datacenter.jpg" alt="Data center infrastructure" class="banner">
+
+  <section class="page-title">
+    <h2>Explore Our Expertise</h2>
+    <p>From cloud migrations to secure backups and modern networking — discover how we transform your infrastructure with scalable, secure, and smart IT solutions.</p>
+  </section>
+
+  <main class="container">
+    <div class="services-grid">
       <div class="service-box">
         <h3>Microsoft 365 Administration & Migration</h3>
         <p>Setup, license management, and seamless migration from on-prem or legacy systems to Microsoft 365 cloud platform.</p>
@@ -117,7 +95,7 @@
         <p>Deliver IT roadmaps, project coordination, vendor management, and on-demand technical support for your business needs.</p>
       </div>
     </div>
-  </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 VC Tech Solution. All rights reserved.</p>
