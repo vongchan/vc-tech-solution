@@ -7,29 +7,42 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    .banner {
+    .banner-full {
       width: 100vw;
-      height: 420px;
-      object-fit: cover;
-      margin: 0 auto;
+      margin-left: calc(-50vw + 50%);
+      height: auto;
       display: block;
-      border-radius: 0;
-      animation: fadeInFlash 1.5s ease-in forwards;
-      opacity: 0;
     }
-    .page-title {
-      text-align: center;
-      margin-top: 60px;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
     }
-    .page-title h2 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
+    .service-box {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 240px;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-    .page-title p {
-      font-size: 1.1rem;
-      color: #555;
-      max-width: 700px;
-      margin: 0 auto;
+    .service-content {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      width: 100%;
+    }
+    .service-box h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .service-box p {
+      margin-top: 8px;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -45,71 +58,39 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <img src="images/datacenter.jpg" alt="Data center infrastructure" class="banner">
-
-  <section class="page-title">
-    <h2>Explore Our Expertise</h2>
-    <p>From cloud migrations to secure backups and modern networking — discover how we transform your infrastructure with scalable, secure, and smart IT solutions.</p>
-  </section>
+  <img src="images/datacenter.jpg" alt="Data center infrastructure" class="banner-full">
 
   <main class="container">
     <div class="services-grid">
-      <div class="service-box">
-        <h3>Microsoft 365 Administration & Migration</h3>
-        <p>Setup, license management, and seamless migration from on-prem or legacy systems to Microsoft 365 cloud platform.</p>
+      <div class="service-box" style="background-image: url('images/managed.jpg');">
+        <div class="service-content">
+          <h3>Managed IT Services</h3>
+          <p>End-to-end IT support, systems monitoring, and proactive solutions tailored to your business.</p>
+        </div>
       </div>
-      <div class="service-box">
-        <h3>Exchange Hybrid & Email Security</h3>
-        <p>Deploy hybrid Exchange environments with modern spam filtering, email encryption, and security compliance configuration.</p>
+      <div class="service-box" style="background-image: url('images/security.jpg');">
+        <div class="service-content">
+          <h3>IT Security</h3>
+          <p>Comprehensive cybersecurity strategies including firewall, endpoint protection, and vulnerability management.</p>
+        </div>
       </div>
-      <div class="service-box">
-        <h3>Firewall Setup & VPN Configuration</h3>
-        <p>Configure and optimize firewalls including UniFi, FortiGate, and SonicWall. Enable secure VPN for remote workers.</p>
+      <div class="service-box" style="background-image: url('images/consulting.jpg');">
+        <div class="service-content">
+          <h3>IT Consulting</h3>
+          <p>Strategic IT guidance and technology planning to align your infrastructure with growth goals.</p>
+        </div>
       </div>
-      <div class="service-box">
-        <h3>VMware & Hyper-V Virtual Infrastructure</h3>
-        <p>Design and deploy scalable virtualization environments for production workloads, lab testing, and hybrid cloud hosting.</p>
-      </div>
-      <div class="service-box">
-        <h3>Synology & Veeam Backup Implementation</h3>
-        <p>Deploy Synology NAS with Veeam Backup & Replication to protect critical data, ensure disaster recovery, and manage retention policies.</p>
-      </div>
-      <div class="service-box">
-        <h3>Active Directory & Windows Server Deployment</h3>
-        <p>Install, configure, and maintain domain controllers, DNS, DHCP, group policies, and centralized authentication systems.</p>
-      </div>
-      <div class="service-box">
-        <h3>Cloud Solutions: Azure, OneDrive, SharePoint</h3>
-        <p>Implement secure cloud storage, collaboration tools, and hybrid environments with Microsoft Azure and M365 cloud apps.</p>
-      </div>
-      <div class="service-box">
-        <h3>Patch Management & Endpoint Security</h3>
-        <p>Automate OS and software patching, deploy EDR/AV tools, and enforce security policies across all workstations.</p>
-      </div>
-      <div class="service-box">
-        <h3>Network Cabling, Switch & Access Point Setup</h3>
-        <p>Design and install physical network infrastructure including structured cabling, VLAN segmentation, and wireless AP deployment.</p>
-      </div>
-      <div class="service-box">
-        <h3>IT Consulting, Project Planning, and Support</h3>
-        <p>Deliver IT roadmaps, project coordination, vendor management, and on-demand technical support for your business needs.</p>
+      <div class="service-box" style="background-image: url('images/infrastructure.jpg');">
+        <div class="service-content">
+          <h3>IT Infrastructure Services</h3>
+          <p>Deployment and management of reliable, scalable server, network, and cloud-based infrastructures.</p>
+        </div>
       </div>
     </div>
   </main>
 
   <footer>
     <p>&copy; 2025 VC Tech Solution. All rights reserved.</p>
-    <button onclick="scrollToTop()" id="topBtn" title="Go to top">↑ Top</button>
   </footer>
-
-  <script>
-    const topBtn = document.getElementById("topBtn");
-    window.onscroll = function () {
-      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    };
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
