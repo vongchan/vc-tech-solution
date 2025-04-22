@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | VC Tech Solution</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="hero">
     <h1>Our Services</h1>
   </header>
 
@@ -19,7 +20,7 @@
   </nav>
 
   <main class="container">
-    <img src="images/datacenter.jpg" alt="IT services" class="banner">
+    <img src="images/datacenter.jpg" alt="Data center infrastructure" class="banner">
     <ul>
       <li>Microsoft 365 Administration & Migration</li>
       <li>Exchange Hybrid & Email Security</li>
@@ -36,6 +37,17 @@
 
   <footer>
     <p>&copy; 2025 VC Tech Solution. All rights reserved.</p>
+    <button onclick="scrollToTop()" id="topBtn" title="Go to top">↑ Top</button>
   </footer>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
