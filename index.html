@@ -20,6 +20,7 @@
         nav {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 15px;
         }
         nav a, .dropdown-btn {
@@ -29,80 +30,65 @@
         }
         .dropdown {
             position: relative;
-            display: inline-block;
         }
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
             z-index: 1;
         }
         .dropdown-content a {
-            color: black;
+            color: #333;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
-            text-align: left;
         }
-        .dropdown-content a:hover {background-color: #f1f1f1}
-        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            padding: 20px;
             max-width: 1200px;
-            margin: auto;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
         .service {
-            flex: 1 1 calc(50% - 40px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #fff;
-            padding: 20px;
+            background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
         }
         .service img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 6px;
             margin-bottom: 15px;
         }
-        .service div {
-            text-align: center;
-        }
-        .contact, .about {
-            flex: 1 1 100%;
-            text-align: center;
-            margin-top: 20px;
+        .about, .contact {
+            background: #e2e2e2;
             padding: 20px;
-            background-color: #e2e2e2;
             border-radius: 8px;
+            margin-top: 30px;
         }
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            margin-top: 40px;
         }
         .social-links a {
             margin: 0 10px;
             color: #fff;
             text-decoration: none;
-        }
-        @media (max-width: 768px) {
-            .service {
-                flex: 1 1 100%;
-            }
         }
     </style>
 </head>
@@ -131,25 +117,40 @@
 
 <div class="container">
 
-    <!-- Services Sections -->
-    <section class="service" id="managed">
-        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" alt="Managed IT Services">
-        <div>
+    <div class="services-grid">
+        <section class="service" id="managed">
+            <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" alt="Managed IT Services">
             <h2>Managed IT Services</h2>
-            <p>We offer comprehensive managed IT services to ensure your business technology operates efficiently and securely.</p>
-        </div>
-    </section>
+            <p>Our managed IT services include 24/7 monitoring, proactive maintenance, and dedicated support to keep your systems running smoothly. We tailor our services to your business goals to reduce downtime, increase efficiency, and ensure your infrastructure stays secure and up-to-date.</p>
+        </section>
 
-    <!-- About Us Section -->
-    <div class="about" id="about">
-        <h2>About VC Tech Solution</h2>
-        <p>VC Tech Solution provides leading-edge IT solutions tailored specifically for your business needs, driven by experienced professionals committed to delivering excellent results.</p>
+        <section class="service" id="security">
+            <img src="https://images.pexels.com/photos/5380598/pexels-photo-5380598.jpeg" alt="Cybersecurity">
+            <h2>Cybersecurity and IT Security</h2>
+            <p>We deliver robust cybersecurity strategies that include threat detection, endpoint protection, vulnerability assessments, and compliance solutions to protect your business data and systems from internal and external threats.</p>
+        </section>
+
+        <section class="service" id="consulting">
+            <img src="https://images.pexels.com/photos/1181605/pexels-photo-1181605.jpeg" alt="IT Consulting">
+            <h2>IT Consulting Services</h2>
+            <p>Our expert consultants provide strategic planning, IT assessments, and technology roadmaps to help you streamline operations, improve performance, and leverage IT to drive business growth and innovation.</p>
+        </section>
+
+        <section class="service" id="infrastructure">
+            <img src="https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg" alt="IT Infrastructure">
+            <h2>IT Infrastructure and Data Center</h2>
+            <p>We design, implement, and manage reliable IT infrastructures that include servers, networks, storage, and data centers. Our solutions ensure optimal performance, scalability, and security for your entire IT environment.</p>
+        </section>
     </div>
 
-    <!-- Contact Section -->
+    <div class="about" id="about">
+        <h2>About VC Tech Solution</h2>
+        <p>VC Tech Solution is a trusted provider of advanced IT services, offering tailored solutions to businesses of all sizes. Our mission is to empower our clients with cutting-edge technologies and expert guidance that drive digital transformation and operational success.</p>
+    </div>
+
     <div class="contact" id="contact">
         <h3>Contact VC Tech Solution</h3>
-        <p>Email: info@vctechsolution.com | Phone: (123) 456-7890 </p>
+        <p>Email: info@vctechsolution.com | Phone: (123) 456-7890 | Address: 123 Tech Avenue, IT City, State, Zip</p>
     </div>
 
 </div>
@@ -158,20 +159,6 @@
     © 2025 VC Tech Solution | All rights reserved.
     <div class="social-links">
         <a href="#">LinkedIn</a>
-        <a href="#">Twitter</a>
-        <a href="#">Facebook</a>
-    </div>
-</footer>
-
-</body>
-</html>
-
-
-</div>
-<footer>
-    © 2025 VC Tech Solution | All rights reserved.
-    <div class="social-links">
-        <a href="https://www.linkedin.com/company/vctechsolution/">LinkedIn</a>
         <a href="#">Twitter</a>
         <a href="#">Facebook</a>
     </div>
