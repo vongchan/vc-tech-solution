@@ -1,41 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VC Tech Solution</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    .banner-full {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      height: auto;
-      display: block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional IT Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .service {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .service img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        .service h2 {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>VC Tech Solution</h1>
-    <p>Secure & Scalable IT Solutions</p>
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header>
+    <h1>Professional IT Services</h1>
+    <nav>
+        <a href="#managed">Managed Services</a>
+        <a href="#security">Cybersecurity</a>
+        <a href="#consulting">IT Consulting</a>
+        <a href="#infrastructure">Infrastructure</a>
+    </nav>
+</header>
 
-  <main class="container">
-    <img src="images/networking.jpg" alt="Networking setup" class="banner-full">
-    <h2>Welcome to VC Tech Solution</h2>
-    <p>We design and deploy enterprise-grade IT solutions for small to mid-sized businesses. Explore our full list of services or get in touch today.</p>
-  </main>
+<div class="container">
 
-  <footer>
-    <p>&copy; 2025 VC Tech Solution. All rights reserved.</p>
-  </footer>
+    <section class="service" id="managed">
+        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" alt="Managed IT Services">
+        <div>
+            <h2>Managed IT Services</h2>
+            <p>We offer comprehensive managed IT services to ensure your business technology operates efficiently and securely.</p>
+        </div>
+    </section>
+
+    <section class="service" id="security">
+        <img src="https://images.pexels.com/photos/5380598/pexels-photo-5380598.jpeg" alt="Cybersecurity">
+        <div>
+            <h2>Cybersecurity and IT Security</h2>
+            <p>Protect your organization's data with our advanced cybersecurity solutions designed to defend against threats.</p>
+        </div>
+    </section>
+
+    <section class="service" id="consulting">
+        <img src="https://images.pexels.com/photos/1181605/pexels-photo-1181605.jpeg" alt="IT Consulting">
+        <div>
+            <h2>IT Consulting Services</h2>
+            <p>Get expert advice and strategic guidance on technology implementations to align with your business goals.</p>
+        </div>
+    </section>
+
+    <section class="service" id="infrastructure">
+        <img src="https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg" alt="IT Infrastructure">
+        <div>
+            <h2>IT Infrastructure and Data Center</h2>
+            <p>Reliable and scalable IT infrastructure solutions, including modern data centers and network management.</p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    © 2025 Professional IT Services | All rights reserved.
+</footer>
+
 </body>
 </html>
