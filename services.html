@@ -7,10 +7,33 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f7fa;
+    }
+    header.hero {
+      background: linear-gradient(to right, #233a5c, #2c5364);
+      padding: 40px 0;
+      text-align: center;
+      color: white;
+    }
+    nav {
+      background-color: #1c2230;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
     .banner-full {
-      width: 50vw;
+      width: 100vw;
       margin-left: calc(-50vw + 50%);
-      height: 280px;
+      height: 300px;
       object-fit: cover;
       display: block;
     }
@@ -21,38 +44,44 @@
     }
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
     .service-box {
-      border-radius: 10px;
-      overflow: hidden;
       background: #fff;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease-in-out;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .service-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
     }
     .service-box img {
       width: 100%;
-      height: 220px;
+      height: 200px;
       object-fit: cover;
     }
     .service-content {
-      padding: 24px;
-      text-align: left;
+      padding: 20px;
     }
     .service-content h3 {
-      margin: 0 0 12px;
-      font-size: 1.4rem;
-      color: #2b2b2b;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #2a2f45;
     }
     .service-content p {
-      margin: 0;
       font-size: 1rem;
       color: #555;
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1c2230;
+      color: #aaa;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -76,28 +105,28 @@
         <img src="images/managed.jpg" alt="Managed IT Services">
         <div class="service-content">
           <h3>Managed IT Services</h3>
-          <p>We handle day-to-day IT operations including helpdesk, updates, and monitoring so your business stays secure and productive.</p>
+          <p>Day-to-day management of IT operations, including remote support, helpdesk, and software updates to keep your systems running efficiently.</p>
         </div>
       </div>
       <div class="service-box">
         <img src="images/security.jpg" alt="IT Security">
         <div class="service-content">
           <h3>IT Security</h3>
-          <p>Protect your digital assets with firewall setup, antivirus, email protection, and user access control enforcement.</p>
+          <p>Comprehensive protection for your infrastructure and data using firewalls, antivirus, endpoint detection, and real-time threat monitoring.</p>
         </div>
       </div>
       <div class="service-box">
         <img src="images/consulting.jpg" alt="IT Consulting">
         <div class="service-content">
           <h3>IT Consulting</h3>
-          <p>Get expert strategic advice, technology roadmaps, and scalable IT solutions aligned to your business goals.</p>
+          <p>Technology strategy, project planning, infrastructure evaluation, and deployment blueprints customized to your unique business needs.</p>
         </div>
       </div>
       <div class="service-box">
         <img src="images/infrastructure.jpg" alt="Infrastructure Services">
         <div class="service-content">
           <h3>Infrastructure Services</h3>
-          <p>Deploy and maintain reliable networks, servers, cloud, and backup systems to ensure long-term operational continuity.</p>
+          <p>Network setup, server installation, cloud integration, and backup systems tailored to support scalable and secure operations.</p>
         </div>
       </div>
     </div>
