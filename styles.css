@@ -102,3 +102,30 @@ a:hover {
     font-size: 1rem;
   }
 }
+/* Add to styles.css */
+
+/* Animate flash banner on load */
+.banner {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInFlash 1.5s ease-in forwards;
+}
+
+@keyframes fadeInFlash {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
