@@ -7,6 +7,32 @@
   <title>Services | VC Tech Solution</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .banner {
+      width: 100vw;
+      height: 420px;
+      object-fit: cover;
+      margin: 0 auto;
+      display: block;
+      border-radius: 0;
+      animation: fadeInFlash 1.5s ease-in forwards;
+      opacity: 0;
+    }
+    .page-title {
+      text-align: center;
+      margin-top: 60px;
+    }
+    .page-title h2 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .page-title p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
   <header class="hero">
@@ -20,9 +46,14 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <main class="container">
-    <img src="images/datacenter.jpg" alt="Data center infrastructure" class="banner">
+  <img src="images/datacenter.jpg" alt="Data center infrastructure" class="banner">
 
+  <section class="page-title">
+    <h2>Explore Our Expertise</h2>
+    <p>From cloud migrations to secure backups and modern networking — discover how we transform your infrastructure with scalable, secure, and smart IT solutions.</p>
+  </section>
+
+  <main class="container">
     <div class="services-grid">
       <div class="service-box">
         <h3>Microsoft 365 Administration & Migration</h3>
