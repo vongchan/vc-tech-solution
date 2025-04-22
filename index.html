@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VC Tech Solution</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    window.addEventListener('scroll', function () {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('sticky', window.scrollY > 0);
+    });
+  </script>
 </head>
 <body>
-  <header>
+  <header class="hero">
     <h1>VC Tech Solution</h1>
     <p>Secure & Scalable IT Solutions</p>
   </header>
@@ -20,7 +29,7 @@
   </nav>
 
   <main class="container">
-    <img src="images/networking.jpg" alt="Networking setup" class="banner">
+    <img src="Images/networking.jpg" alt="Networking setup" class="banner">
     <h2>Welcome to VC Tech Solution</h2>
     <p>We design and deploy enterprise-grade IT solutions for small to mid-sized businesses. Explore our full list of services or get in touch today.</p>
   </main>
@@ -28,5 +37,15 @@
   <footer>
     <p>&copy; 2025 VC Tech Solution. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
