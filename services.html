@@ -7,28 +7,57 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    .banner-full {
+    .banner-section {
+      position: relative;
       width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      height: auto;
-      display: block;
+      height: 100vh;
+      overflow: hidden;
     }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .banner-section img.banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      animation: fadeInFlash 1.5s ease-in forwards;
+      opacity: 0;
+    }
+    .services-over-banner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
       gap: 20px;
-      padding: 40px 20px;
+      padding: 60px 40px;
+      box-sizing: border-box;
     }
-    .service-box {
-      background: white;
+    .services-over-banner .service-box {
+      min-width: 300px;
+      background: rgba(255, 255, 255, 0.9);
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      text-align: left;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex-shrink: 0;
     }
-    .service-box h3 {
+    .services-over-banner .service-box h3 {
       margin-top: 0;
-      color: #1f2d3d;
+    }
+    @keyframes fadeInFlash {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      50% {
+        opacity: 0.7;
+        transform: scale(1.02);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   </style>
 </head>
@@ -44,10 +73,9 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <img src="images/datacenter.jpg" alt="Data center infrastructure" class="banner-full">
-
-  <main class="container">
-    <div class="services-grid">
+  <section class="banner-section">
+    <img src="images/datacenter.jpg" alt="Data center infrastructure" class="banner">
+    <div class="services-over-banner">
       <div class="service-box">
         <h3>Microsoft 365 Administration & Migration</h3>
         <p>Setup, license management, and seamless migration from on-prem or legacy systems to Microsoft 365 cloud platform.</p>
@@ -89,10 +117,21 @@
         <p>Deliver IT roadmaps, project coordination, vendor management, and on-demand technical support for your business needs.</p>
       </div>
     </div>
-  </main>
+  </section>
 
   <footer>
     <p>&copy; 2025 VC Tech Solution. All rights reserved.</p>
+    <button onclick="scrollToTop()" id="topBtn" title="Go to top">↑ Top</button>
   </footer>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
