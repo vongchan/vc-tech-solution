@@ -36,6 +36,7 @@
 
   <footer>
     <p>&copy; 2025 VC Tech Solution. All rights reserved.</p>
+    <button onclick="scrollToTop()" id="topBtn" title="Go to top">↑ Top</button>
   </footer>
 
   <script>
@@ -46,6 +47,15 @@
         document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    // Scroll to Top Button
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   </script>
 </body>
 </html>
