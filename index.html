@@ -15,13 +15,23 @@
             background-color: #333;
             color: #fff;
             padding: 20px 0;
-            text-align: center;
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .header-container h1 {
+            margin: 0;
         }
         nav {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
             gap: 15px;
+            align-items: center;
         }
         nav a, .dropdown-btn {
             color: #fff;
@@ -95,24 +105,26 @@
 <body>
 
 <header>
-    <h1>VC Tech Solution</h1>
-    <nav>
-        <a href="#managed">Managed Services</a>
-        <a href="#security">Cybersecurity</a>
-        <a href="#consulting">IT Consulting</a>
-        <a href="#infrastructure">Infrastructure</a>
-        <div class="dropdown">
-            <span class="dropdown-btn">More Services ▼</span>
-            <div class="dropdown-content">
-                <a href="#cloud">Cloud Services</a>
-                <a href="#backup">Backup & Recovery</a>
-                <a href="#support">Helpdesk & Support</a>
-                <a href="#network">Network Management</a>
+    <div class="header-container">
+        <h1>VC Tech Solution</h1>
+        <nav>
+            <a href="#managed">Managed Services</a>
+            <a href="#security">Cybersecurity</a>
+            <a href="#consulting">IT Consulting</a>
+            <a href="#infrastructure">Infrastructure</a>
+            <div class="dropdown">
+                <span class="dropdown-btn">More Services ▼</span>
+                <div class="dropdown-content">
+                    <a href="#cloud">Cloud Services</a>
+                    <a href="#backup">Backup & Recovery</a>
+                    <a href="#support">Helpdesk & Support</a>
+                    <a href="#network">Network Management</a>
+                </div>
             </div>
-        </div>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
-    </nav>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
 <div class="container">
