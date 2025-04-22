@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | VC Tech Solution</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="hero">
     <h1>Contact Us</h1>
   </header>
 
@@ -19,14 +20,25 @@
   </nav>
 
   <main class="container contact-info">
-    <img src="images/contact.jpg" alt="Networking setup" class="banner">
-    <p><strong>Email:</strong> <a href="mailto:support@vctechsolution.com">support@vctechsolution.com</a></p>
+    <img src="images/contact.jpg" alt="Contact icons and phone" class="banner">
+    <p><strong>Email:</strong> <a href="mailto:phillipc@vctechsolution.com">phillipc@vctechsolution.com</a></p>
     <p><strong>Office:</strong> +1 (425) 900-5556</p>
     <p><strong>Mobile:</strong> +1 (508) 667-9707</p>
   </main>
 
   <footer>
     <p>&copy; 2025 VC Tech Solution. All rights reserved.</p>
+    <button onclick="scrollToTop()" id="topBtn" title="Go to top">↑ Top</button>
   </footer>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
