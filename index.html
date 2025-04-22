@@ -107,6 +107,27 @@
             border-radius: 6px;
             margin-bottom: 15px;
         }
+        .partners {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 0;
+        }
+        .partner-logos img {
+            height: 40px;
+            max-width: 120px;
+            object-fit: contain;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .partner-logos img:hover {
+            opacity: 1;
+        }
         .about, .contact {
             background: #e2e2e2;
             padding: 20px;
@@ -135,7 +156,7 @@
 
 <header>
     <div class="header-container">
-        <img src="images/logo_white.png" alt="VC Tech Solution Logo" style="height: 100px;" VC Tech Solution>
+        <img src="images/logo.png" alt="VC Tech Solution Logo" style="height: 100px;">
         <nav>
             <a href="#managed">Managed Services</a>
             <a href="#security">Cybersecurity</a>
@@ -182,6 +203,26 @@
             <h2>IT Infrastructure and Data Center</h2>
             <p>We design, implement, and manage reliable IT infrastructures that include servers, networks, storage, and data centers. Our solutions ensure optimal performance, scalability, and security for your entire IT environment.</p>
         </section>
+    </div>
+
+    <div class="partners" id="partners">
+        <h2>Technology Partners</h2>
+        <div class="partner-logos">
+            <img src="images/veeam.png" alt="Veeam" title="Veeam Backup">
+            <img src="images/vmware.png" alt="VMware" title="VMware">
+            <img src="images/cisco.png" alt="Cisco" title="Cisco">
+            <img src="images/fortinet.png" alt="Fortinet" title="Fortinet">
+            <img src="images/paloalto.png" alt="Palo Alto" title="Palo Alto">
+            <img src="images/sonicwall.png" alt="SonicWall" title="SonicWall">
+            <img src="images/meraki.png" alt="Meraki" title="Meraki">
+            <img src="images/arista.png" alt="Arista" title="Arista">
+            <img src="images/dell.png" alt="Dell EMC" title="Dell EMC">
+            <img src="images/hpe.png" alt="HPE" title="Hewlett Packard Enterprise">
+            <img src="images/synology.png" alt="Synology" title="Synology">
+            <img src="images/microsoft.png" alt="Microsoft" title="Microsoft">
+            <img src="images/google.png" alt="Google" title="Google Cloud">
+            <img src="images/aws.png" alt="Amazon AWS" title="Amazon Web Services">
+        </div>
     </div>
 
     <div class="about" id="about">
